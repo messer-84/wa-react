@@ -13,7 +13,7 @@ class Tabs extends Component {
   }
 
   render() {
-    const {activeCityIndex, cities, onDeleteCity, weatherData} = this.props;
+    const {activeCityIndex, onDeleteCity, weatherData} = this.props;
 
 
     const tabs = weatherData ? weatherData.map((item, index) => {
