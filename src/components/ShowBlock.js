@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import styles from "../assets/scss/ShowBlock.scss";
+
+
 
 class ShowBlock extends Component {
   constructor() {
@@ -18,16 +21,16 @@ class ShowBlock extends Component {
       const weatherIcon = oneCityData.weather[0].icon;
       const iconUrl = 'http://openweathermap.org/img/w/' + weatherIcon + '.png';
 
-      weatherInfo = <div className="show-block">
-        <div className="city-head">
+      weatherInfo = <div className={styles["show-inner"]}>
+        <div className={styles["city-head"]}>
           <h2>{oneCityData.name}</h2>
           <img src={iconUrl} alt=""/>
         </div>
-         <div className="item">Country: {oneCityData.sys.country}</div>
-         <div className="item">Temp: {oneCityData.main.temp} °F</div>
-         <div className="item">Clouds: {oneCityData.clouds.all}%</div>
-         <div className="item">Humidity: {oneCityData.main.humidity}%</div>
-         <div className="item">Pressure: {oneCityData.main.pressure} hpa</div>
+         <div className={styles.item}>Country: {oneCityData.sys.country}</div>
+         <div className={styles.item}>Temp: {oneCityData.main.temp} °F</div>
+         <div className={styles.item}>Clouds: {oneCityData.clouds.all}%</div>
+         <div className={styles.item}>Humidity: {oneCityData.main.humidity}%</div>
+         <div className={styles.item}>Pressure: {oneCityData.main.pressure} hpa</div>
 {/*         <div>Geo coords:
            <a
              href="/weathermap?zoom=12&amp;lat=40.7306&amp;lon=-73.9867">[ {weatherData.coord.lat}, {weatherData.coord.lon} ]</a>
@@ -47,7 +50,7 @@ class ShowBlock extends Component {
     // };
 
     return (
-      <div>{weatherInfo}</div>
+      <div className={styles["show-block"]}>{weatherInfo}</div>
     );
   }
 }

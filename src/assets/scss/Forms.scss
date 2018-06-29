@@ -1,0 +1,43 @@
+.add-form {
+  position: relative;
+  padding: 40px 40px;
+  background: rgba(#666, .5);
+}
+
+.form-block{
+  position: relative;
+  display: flex;
+}
+
+.field{
+  display: block;
+  height: 40px;
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  font-size: 18px;
+  background: #fff !important;
+  &:focus{
+    outline: none;
+  }
+}
+
+input:-webkit-autofill{
+  background-color: #fff !important;
+}
+
+.add-button{
+  height: 40px;
+  width: 100px;
+  border-radius: 0;
+  font-size: 18px;
+  border: 0;
+  background: #080220;
+  color: #fff;
+  cursor: pointer;
+  font-family: "PT Sans Narrow", sans-serif;
+  &:active,
+  &:focus{
+    outline: none;
+  }
+}

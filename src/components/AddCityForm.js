@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import styles from '../assets/scss/Forms.scss'
 
 class AddCityForm extends Component {
   constructor() {
@@ -33,20 +33,18 @@ class AddCityForm extends Component {
 
   render() {
     return (
-      <div className="add-form">
-        {/*<h2>Enter the name of the city:</h2>*/}
+      <div className={styles["add-form"]}>
         <form
           onSubmit={this.handleSubmit}
-        className="form-block"
-        >
+        className={styles["form-block"]}>
           <input
-            className="field"
+            className={styles.field}
             type="text"
             name="city"
             placeholder="Enter the name of the city:"
             value={this.state.value}
             onChange={this.handleChange}/>
-          <button className="add-button">Add</button>
+          <button className={styles["add-button"]}>Add</button>
         </form>
       </div>
     );

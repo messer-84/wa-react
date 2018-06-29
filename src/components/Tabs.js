@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styles from "../assets/scss/Sidebar.scss";
 
 
 class Tabs extends Component {
@@ -13,13 +14,13 @@ class Tabs extends Component {
   }
 
   render() {
-    const {activeCityIndex, cities, onDeleteCity, weatherData} = this.props;
+    const {activeCityIndex, onDeleteCity, weatherData} = this.props;
 
 
     const tabs = weatherData ? weatherData.map((item, index) => {
       return (
         <div
-          className={`tab ${activeCityIndex === index ? 'active' : ''}`}
+          className={`${styles.tab} ${activeCityIndex === index ? styles["tab-active"] : ''}`}
           key={item.id}
         >
           <a href="#" onClick={(e) => this.changeCity(e, index)}>
@@ -32,9 +33,9 @@ class Tabs extends Component {
 
 
     return (
-      <div className="tabs-block">
-        <div className="title">Cities:</div>
-        <div className="tabs">
+      <div className={styles["tabs-block"]}>
+        <div className={styles.title}>Cities:</div>
+        <div className={styles.tabs}>
           {tabs}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../assets/App.scss';
+import styles from '../assets/scss/App.scss';
 import Tabs from './Tabs';
 import ShowBlock from './ShowBlock';
 import AddCityForm from "./AddCityForm";
@@ -156,14 +156,14 @@ class App extends Component {
 
 
     return (
-      <div className="container">
+      <div className={styles.container}>
         <h1>Weather App</h1>
-        <div className="row">
-          <div className="main">
+        <div className={styles.row}>
+          <div className={styles.main}>
             <AddCityForm onAddCity={this.onAddCity}/>
             <ShowBlock weatherData={weatherData} activeCityIndex={activeCityIndex}/>
           </div>
-          <div className="sidebar">
+          <div className={styles.sidebar}>
             <Tabs
               activeCityIndex={activeCityIndex}
               cities={cities}
