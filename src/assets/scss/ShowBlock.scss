@@ -1,6 +1,11 @@
+@import "./common.scss";
+
 .show-block{
   padding: 20px 40px;
+}
 
+:local(.gl-block){
+  background: green;
 }
 
 .show-inner{

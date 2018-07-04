@@ -1,3 +1,14 @@
+@import "./common.scss";
+
+:local {
+  .gl-block {
+    //background: red;
+  }
+}
+.gl-block{
+  //background: red;
+}
+
 .sidebar {
   position: relative;
   width: 100%;
@@ -11,35 +22,31 @@
   }
 }
 
-.tabs-block{
-  .title{
+.tabs-block {
+  .title {
     padding: 10px 20px;
-    background: #080220;
-letter-spacing: 0.5px;
-    color: #fff;
+    //background: #080220;
+    letter-spacing: 0.5px;
+    //color: #fff;
   }
 }
 
-.tabs{
+.tabs {
   position: relative;
 }
+
 .tab {
   position: relative;
-  &.active a {
-
-  }
   a {
     background: #26146F;
     display: block;
     padding: 10px 20px;
     height: 50px;
     border-bottom: 1px solid #5588cc;
-    //border-top: 0;
     line-height: 30px;
     color: #fff;
-    text-decoration: none;
     transition: background .3s ease;
-    &:hover{
+    &:hover {
       background: rgba(#26146F, .9);
     }
 
@@ -55,7 +62,7 @@ letter-spacing: 0.5px;
     //color: #fff;
     cursor: pointer;
     &:before,
-    &:after{
+    &:after {
       position: absolute;
       content: "";
       height: 2px;
@@ -66,23 +73,29 @@ letter-spacing: 0.5px;
       transition: background .3s ease;
 
     }
-    &:before{
+    &:before {
       transform: rotate(45deg);
     }
-    &:after{
+    &:after {
       transform: rotate(-45deg);
     }
-    &:hover{
+    &:hover {
       &:before,
-      &:after{
+      &:after {
         background: red;
       }
     }
   }
+
 }
 
-.tab-active a{
-  background: #C4B9EF;
-  cursor: default;
-  pointer-events: none;
+.tab-active {
+  //font-weight: 700;
+  a{
+
+  background: #444;
+    cursor: default;
+    pointer-events: none;
+  }
 }
+

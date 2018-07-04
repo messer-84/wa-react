@@ -158,6 +158,7 @@ class App extends Component {
     return (
       <div className={styles.container}>
         <h1>Weather App</h1>
+        <div className="gl-block">Global</div>
         <div className={styles.row}>
           <div className={styles.main}>
             <AddCityForm onAddCity={this.onAddCity}/>

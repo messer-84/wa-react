@@ -3,30 +3,28 @@ import styles from "../assets/scss/Sidebar.scss";
 
 
 class Tabs extends Component {
-  constructor() {
-    super();
-    this.changeCity = this.changeCity.bind(this);
-  }
-
-  changeCity(e, index) {
+  onChangeCity = index => e => {
     e.preventDefault();
     this.props.onTabClick(index);
-  }
+  };
+
+  handleDeleteCity = index => () => {
+    this.props.onDeleteCity(index);
+  };
 
   render() {
-    const {activeCityIndex, onDeleteCity, weatherData} = this.props;
-
+    const {activeCityIndex, weatherData} = this.props;
 
     const tabs = weatherData ? weatherData.map((item, index) => {
       return (
         <div
-          className={`${styles.tab} ${activeCityIndex === index ? styles["tab-active"] : ''}`}
+          className={`${styles.tab} ${activeCityIndex === index ? styles['tab-active'] : ''}`}
           key={item.id}
         >
-          <a href="#" onClick={(e) => this.changeCity(e, index)}>
+          <a href="#" onClick={this.onChangeCity(index)}>
             {item.name}
           </a>
-          <button onClick={() => onDeleteCity(index)} />
+          <button onClick={this.handleDeleteCity(index)}/>
         </div>
       );
     }) : null;
@@ -34,6 +32,7 @@ class Tabs extends Component {
 
     return (
       <div className={styles["tabs-block"]}>
+        <div className="gl-block">Global</div>
         <div className={styles.title}>Cities:</div>
         <div className={styles.tabs}>
           {tabs}

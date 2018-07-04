@@ -1,0 +1,12 @@
+@import "./settings.scss";
+
+:global {
+  a {
+    text-decoration: underline;
+  }
+  .gl-block {
+    position: relative;
+    height: 30px;
+    //background: black;
+  }
+}

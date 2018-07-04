@@ -26,6 +26,7 @@ class ShowBlock extends Component {
           <h2>{oneCityData.name}</h2>
           <img src={iconUrl} alt=""/>
         </div>
+        <div className={styles["gl-block"]}>Global</div>
          <div className={styles.item}>Country: {oneCityData.sys.country}</div>
          <div className={styles.item}>Temp: {oneCityData.main.temp} °F</div>
          <div className={styles.item}>Clouds: {oneCityData.clouds.all}%</div>
