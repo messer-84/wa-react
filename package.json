@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +31,8 @@
   "dependencies": {
     "babel-preset-env": "^1.6.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  }
+    "react-dom": "^16.2.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
